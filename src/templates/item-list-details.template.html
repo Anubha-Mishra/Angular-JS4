@@ -1,1 +1,5 @@
-<div>Item description: {{ $ctrl.items}}</div>
+<ul>
+  <li ng-repeat="item in $ctrl.items">
+    ({{ item.short_name }}){{ item.name }}
+  </li>
+</ul>

@@ -5,15 +5,14 @@
   .component('itemList', {
     templateUrl: 'src/templates/item-list-details.template.html',
     bindings: {
-      item: '<'
+      items: '<'
     }
   })
   .controller('ItemListController', ItemListController);
 
-  ItemListController.$inject = ['$stateParams', 'item'];
-  function ItemListController($stateParams, item) {
-    var itemDetail = this;
-    var items = item.menu_items[$stateParams.itemId];
-    itemDetail = items.description;
+  ItemListController.$inject = ['items'];
+  function ItemListController(items) {
+    var itemList = this;
+    itemList.items = items;
   }
 })();
