@@ -7,12 +7,5 @@
     bindings: {
       categories: '<'
     }
-  })
-  .controller('CategoriesListController', CategoriesListController);
-
-  CategoriesListController.$inject = ['categories']
-  function CategoriesListController(categories) {
-    var categoryList = this;
-    categoryList.catogary = categories;
-  }
+  });
 })();
